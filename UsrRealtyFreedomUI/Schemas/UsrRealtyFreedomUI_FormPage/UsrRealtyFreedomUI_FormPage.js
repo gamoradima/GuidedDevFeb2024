@@ -86,6 +86,46 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "ActionsButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_9i7h5n2_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"menuItems": [],
+					"clickMode": "menu",
+					"icon": "actions-button-icon"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_CalcAvgPrice",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_yyz5h9d_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrCalculateAveragePriceProcess",
+							"processRunType": "ForTheSelectedPage",
+							"recordIdProcessParameterName": "RealtyIdParameter"
+						}
+					},
+					"icon": "calculator-button-icon"
+				},
+				"parentName": "ActionsButton",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "PushMeButton",
 				"values": {
 					"type": "crt.Button",
@@ -103,7 +143,7 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -224,6 +264,48 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
 				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "UsrTotalMinutes",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 6,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrTotalMinutes_lrlnymn",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrTotalMinutes_lrlnymn"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 5
+			},
+			{
+				"operation": "insert",
+				"name": "UsrRemainingMunutes",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 7,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrRemainingMunutes_h9kcmb8",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrRemainingMunutes_h9kcmb8",
+					"visible": true,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": ""
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 6
 			},
 			{
 				"operation": "insert",
@@ -692,6 +774,13 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 							"dataValueType": 10,
 							"referenceSchemaName": "Contact",
 							"width": 140
+						},
+						{
+							"id": "cb035769-6a21-562e-2e38-f5eb0de56bf7",
+							"code": "GridDetail_flqugmrDS_UsrMinutes",
+							"path": "UsrMinutes",
+							"caption": "#ResourceString(GridDetail_flqugmrDS_UsrMinutes)#",
+							"dataValueType": 4
 						}
 					],
 					"bulkActions": []
@@ -885,12 +974,27 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 										"path": "GridDetail_flqugmrDS.UsrManager"
 									}
 								},
+								"GridDetail_flqugmrDS_UsrMinutes": {
+									"modelConfig": {
+										"path": "GridDetail_flqugmrDS.UsrMinutes"
+									}
+								},
 								"GridDetail_flqugmrDS_Id": {
 									"modelConfig": {
 										"path": "GridDetail_flqugmrDS.Id"
 									}
 								}
 							}
+						}
+					},
+					"PDS_UsrTotalMinutes_lrlnymn": {
+						"modelConfig": {
+							"path": "PDS.UsrTotalMinutes"
+						}
+					},
+					"PDS_UsrRemainingMunutes_h9kcmb8": {
+						"modelConfig": {
+							"path": "PDS.UsrRemainingMunutes"
 						}
 					}
 				}
@@ -959,6 +1063,9 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 								},
 								"UsrManager": {
 									"path": "UsrManager"
+								},
+								"UsrMinutes": {
+									"path": "UsrMinutes"
 								}
 							}
 						}

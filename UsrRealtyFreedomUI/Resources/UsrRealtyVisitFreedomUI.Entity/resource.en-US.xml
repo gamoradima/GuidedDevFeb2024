@@ -6,6 +6,7 @@
 			<Item Name="Columns.UsrComment.Caption" Value="Comment" />
 			<Item Name="Columns.UsrDateAndTime.Caption" Value="Date and Time" />
 			<Item Name="Columns.UsrManager.Caption" Value="Manager" />
+			<Item Name="Columns.UsrMinutes.Caption" Value="Minutes" />
 			<Item Name="Columns.UsrParentRealty.Caption" Value="Parent realty" />
 			<Item Name="Columns.UsrPotentialCustomer.Caption" Value="Potential customer" />
 		</Items>

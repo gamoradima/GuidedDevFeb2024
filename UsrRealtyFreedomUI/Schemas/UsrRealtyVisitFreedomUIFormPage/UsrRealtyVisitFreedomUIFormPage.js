@@ -82,11 +82,30 @@ define("UsrRealtyVisitFreedomUIFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, fu
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_wc254y6",
+				"name": "UsrMinutes",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.UsrRealtyVisitFreedomUIDS_UsrMinutes_yrehkfs",
+					"labelPosition": "above",
+					"control": "$UsrRealtyVisitFreedomUIDS_UsrMinutes_yrehkfs"
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "ComboBox_wc254y6",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 5,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -100,7 +119,7 @@ define("UsrRealtyVisitFreedomUIFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, fu
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -145,6 +164,11 @@ define("UsrRealtyVisitFreedomUIFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, fu
 					"UsrRealtyVisitFreedomUIDS_UsrManager_9ncs1zy": {
 						"modelConfig": {
 							"path": "UsrRealtyVisitFreedomUIDS.UsrManager"
+						}
+					},
+					"UsrRealtyVisitFreedomUIDS_UsrMinutes_yrehkfs": {
+						"modelConfig": {
+							"path": "UsrRealtyVisitFreedomUIDS.UsrMinutes"
 						}
 					}
 				}

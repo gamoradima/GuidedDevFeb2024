@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "23d91f51-ed43-4ba3-afc4-83310865c049",
+    "Name": "UsrCalculateAveragePriceProcess",
+    "ModifiedOnUtc": "\/Date(1709199612000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Calculate average price process",
+    "DependsOn": []
+  }
+}

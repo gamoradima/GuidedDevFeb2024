@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "942c5f06-556b-4d9c-a69b-3d2dc046b039",
+    "Name": "UsrAveragePriceOutputPage",
+    "ModifiedOnUtc": "\/Date(1709198460000)\/",
+    "Parent": {
+      "UId": "97e48060-149c-408f-9f17-8ba82c400249",
+      "Name": "PageWithAreaFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Average price output page"
+  }
+}
